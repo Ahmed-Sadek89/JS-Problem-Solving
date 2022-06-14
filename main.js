@@ -3,6 +3,7 @@
 // ex: isDisarium(75) ➞ false 7^1 + 5^2 = 7 + 25 = 32
 // ex: isDisarium(135) ➞ true 1^1 + 3^2 + 5^3 = 1 + 9 + 125 = 135
 
+// https://edabit.com/challenge/pyxXekyofGasXX2me
 
 const isDisarium = (number) => {
     const s = number.toString();
