@@ -1,6 +1,7 @@
 // Create a function that takes two dates 
 // And returns the number of days between the first and second date.
 
+// https://edabit.com/challenge/3hdXjfJozQySRC3gE
 
 const getDateInfo = (date) => {
     const dateInfo = date.toString().split(' ')
