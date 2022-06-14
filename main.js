@@ -1,48 +1,22 @@
-// Create a function that takes two dates 
-// And returns the number of days between the first and second date.
+// Create a function that takes an array of numbers and return "Boom!"
+// if the digit 7 appears in the array. 
+// Otherwise, return "there is no 7 in the array".
 
-// https://edabit.com/challenge/3hdXjfJozQySRC3gE
+// https://edabit.com/challenge/6R6gReGTGwzpwuffD
 
-const getDateInfo = (date) => {
-    const dateInfo = date.toString().split(' ')
-    
-    return {
-        day: parseInt(dateInfo[2]),
-        month: dateInfo[1],
-        year: parseInt(dateInfo[3])
-    }
-}
-
-
-const getDays = (date1, date2) => {
-    const firstDate = getDateInfo(date1);
-    const secondDate = getDateInfo(date2);
-
-    if( firstDate.year !== secondDate.year || firstDate.month !== secondDate.month ) {
-        return 'Dates may not all be in the same month/year.'
+function sevenBoom(arr) {
+	const arrToString = arr.toString();
+    const fetchSeven = arrToString.match('7');
+    if(fetchSeven){
+        return "Boom!"
     } else {
-        const res = Math.abs(firstDate.day - secondDate.day)
-        return res
+        return "there is no 7 in the array"
     }
-}
+} 
 
-console.log(
-    getDays(
-        new Date("June 14, 2019"),
-        new Date("June 20, 2019")
-    )
-)
 
-console.log(
-    getDays(
-        new Date("December 29, 2018"),
-        new Date("January 1, 2019")
-    )
-)
+console.log(sevenBoom([1, 2, 3, 4, 5, 6, 7]))
 
-console.log(
-    getDays(
-        new Date("July 20, 2019"),
-        new Date("July 30, 2019")
-    )
-)
+console.log(sevenBoom([8, 6, 33, 100]))
+
+console.log(sevenBoom([2, 55, 60, 97, 86]))
